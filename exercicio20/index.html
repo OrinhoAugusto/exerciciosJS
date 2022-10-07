@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estações no Brasil</title>
+</head>
+
+<body>
+    <h1>Descubra a estação do ano</h1>
+    <button onclick="descobrir()">Informe o mês aqui</button>
+    <h3>Clique no botão acima para informar o mês</h3>
+    <p id="par"></p>
+
+    <script>
+        const descobrir = () => {
+            let mes = prompt('Digite o mês em extenso (ex: Setembro)')
+            let c = mes.toLowerCase()
+            let c1 = c.replace(c.slice(0,1), c.slice(0,1).toUpperCase())
+            
+            switch (c1) {
+                case "Janeiro": 
+                    document.getElementById('par').innerHTML = "No mês de Janeiro, estamos na estação INVERNO."
+                    break
+                case "Fevereiro":
+                    document.getElementById('par').innerHTML = "No mês de Fevereiro, estamos na estação INVERNO."
+                    break
+                case "Março":
+                    document.getElementById('par').innerHTML = "No mês de Março, estamos na estação INVERNO."
+                    break
+                case "Abril":
+                    document.getElementById('par').innerHTML = "No mês de Abril, estamos na estação PRIMAVERA."
+                    break
+                case "Maio":
+                    document.getElementById('par').innerHTML = "No mês de Maio, estamos na estação PRIMAVERA."
+                    break
+                case "Junho":
+                    document.getElementById('par').innerHTML = "No mês de Junho, estamos na estação PRIMAVERA."
+                    break
+                case "Julho":
+                    document.getElementById('par').innerHTML = "No mês de Julho, estamos na estação VERÃO."
+                    break
+                case "Agosto":
+                    document.getElementById('par').innerHTML = "No mês de Agosto, estamos na estação VERÃO."
+                    break
+                case "Setembro":
+                    document.getElementById('par').innerHTML = "No mês de Setembro, estamos na estação VERÃO."
+                    break
+                case "Outubro":
+                    document.getElementById('par').innerHTML = "No mês de Outubro, estamos na estação OUTONO."
+                    break
+                case "Novembro":
+                    document.getElementById('par').innerHTML = "No mês de Novembro, estamos na estação OUTONO."
+                    break
+                case "Dezembro":
+                    document.getElementById('par').innerHTML = "No mês de Dezembro, estamos na estação OUTONO."
+                    break
+                default:
+                    document.getElementById('par').innerHTML = "Mês inválido."
+            }
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo em JS</title>
+</head>
+
+<body>
+    <h1>Tente adivinhar meu número</h1>
+    <button onclick="comecar()">Tentar adivinhar</button>
+    <p id="par"></p>
+    <script>
+        let number = parseInt(Math.random() * 100)
+        const comecar = () => {
+            let palpite = parseInt(prompt('Qual é o seu palpite?'))
+
+            if (palpite > number) {
+                document.getElementById('par').innerHTML += "O número é MAIOR que esse!<br><br>"
+            }
+            if (palpite < number) {
+                document.getElementById('par').innerHTML += "O número é MENOR que esse!<br><br>"
+            }
+            if (palpite == number) {
+                document.getElementById('par').innerHTML += "Você acertou o número!<br><br>"
+            }
+        }
+    </script>
+</body>
+
+</html>

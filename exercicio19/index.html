@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Múltiplas ações</title>
+</head>
+
+<body>
+    <h1>Múltiplas ações</h1>
+    <button onclick="calcular()">Clique para iniciar</button>
+    <p id="par"></p>
+    <script>
+        const calcular = () => {
+            let n1 = parseFloat(prompt('Primeiro valor:'))
+            let n2 = parseFloat(prompt('Segundo valor:'))
+            let decisao = parseFloat(prompt(`Valores informados: ${n1} e ${n2}.\nO que vamos fazer?\n[1]Somar\n[2]Subtrair\n[3]Multiplicar\n[4]Dividir`))
+            let resultado
+
+            switch (decisao) {
+                case 1:
+                    resultado = n1 + n2
+                    document.getElementById('par').innerHTML = `O resultado da soma entre os dois valores é ${resultado}.`;
+                    break;
+                case 2:
+                    resultado = n1 - n2
+                    document.getElementById('par').innerHTML = `O resultado da subtração entre os dois valores é ${resultado}.`;
+                    break; 
+                case 3:
+                    resultado = n1 * n2
+                    document.getElementById('par').innerHTML = `O resultado da multiplicação entre os dois valores é ${resultado}.`;
+                    break; 
+                case 4:
+                    resultado = n1 / n2
+                    document.getElementById('par').innerHTML = `O resultado da divisão entre os dois valores é ${resultado}.`;
+                    break;
+                default:
+                    document.getElementById('par').innerHTML = `Digite um valor válido.`
+            }
+        }
+    </script>
+</body>
+
+</html>
